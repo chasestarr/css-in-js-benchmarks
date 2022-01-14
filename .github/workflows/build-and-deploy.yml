@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: build and deploy
 on:
   push:
     branches:
@@ -7,13 +7,22 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      - name: install operating system dependencies
+        run: npx playwright install-deps chromium
 
       - name: install and build
         run: |
           npm ci
           npm run build
+
+      - name: run benchmarks
+        run: node scripts/benchmark.js
 
       - name: deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2

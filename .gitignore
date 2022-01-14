@@ -1,2 +1,4 @@
+.DS_Store
+dist/benchmarks.csv
 dist/index.js
 node_modules

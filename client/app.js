@@ -32,6 +32,7 @@ export function App() {
           <label>
             Library
             <select
+              id="library"
               style={{ width: "100%" }}
               disabled={running}
               onChange={(event) => setLibrary(event.target.value)}
@@ -45,6 +46,7 @@ export function App() {
           <label>
             Benchmark Type
             <select
+              id="benchmark-type"
               style={{ width: "100%" }}
               disabled={running}
               onChange={(event) => setBenchmarkType(event.target.value)}
@@ -56,7 +58,7 @@ export function App() {
           </label>
 
           <button disabled={running} onClick={handleStart}>
-            Start
+            start
           </button>
         </form>
 
@@ -88,7 +90,7 @@ export function App() {
                   </tr>
                   <tr>
                     <td>std dev</td>
-                    <td data-test-id="stdDev">{result.stdDev.toFixed(3)}ms</td>
+                    <td data-test-id="stddev">{result.stdDev.toFixed(3)}ms</td>
                   </tr>
                   <tr>
                     <td>p95</td>
