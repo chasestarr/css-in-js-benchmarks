@@ -502,7 +502,7 @@
             }
             return element;
           };
-          function createElement11(type, config, children) {
+          function createElement10(type, config, children) {
             var propName;
             var props = {};
             var key = null;
@@ -1550,7 +1550,7 @@
                 error("React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
               }
             }
-            var element = createElement11.apply(this, arguments);
+            var element = createElement10.apply(this, arguments);
             if (element == null) {
               return element;
             }
@@ -2444,11 +2444,11 @@
       if (true) {
         (function() {
           "use strict";
-          var React10 = require_react();
+          var React9 = require_react();
           var _assign = require_object_assign();
           var Scheduler = require_scheduler();
           var tracing = require_tracing();
-          var ReactSharedInternals = React10.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React9.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function warn(format) {
             {
               for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -2480,7 +2480,7 @@
               Function.prototype.apply.call(console[level], console, argsWithFormat);
             }
           }
-          if (!React10) {
+          if (!React9) {
             {
               throw Error("ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.");
             }
@@ -3696,7 +3696,7 @@
           var didWarnInvalidChild = false;
           function flattenChildren(children) {
             var content = "";
-            React10.Children.forEach(children, function(child) {
+            React9.Children.forEach(children, function(child) {
               if (child == null) {
                 return;
               }
@@ -3707,7 +3707,7 @@
           function validateProps(element, props) {
             {
               if (typeof props.children === "object" && props.children !== null) {
-                React10.Children.forEach(props.children, function(child) {
+                React9.Children.forEach(props.children, function(child) {
                   if (child == null) {
                     return;
                   }
@@ -8461,7 +8461,7 @@
               }
             }
           }
-          function createElement11(type, props, rootContainerElement, parentNamespace) {
+          function createElement10(type, props, rootContainerElement, parentNamespace) {
             var isCustomComponentTag;
             var ownerDocument = getOwnerDocumentFromRootContainer(rootContainerElement);
             var domElement;
@@ -9338,7 +9338,7 @@
               }
               parentNamespace = hostContextDev.namespace;
             }
-            var domElement = createElement11(type, props, rootContainerInstance, parentNamespace);
+            var domElement = createElement10(type, props, rootContainerInstance, parentNamespace);
             precacheFiberNode(internalInstanceHandle, domElement);
             updateFiberProps(domElement, props);
             return domElement;
@@ -10900,7 +10900,7 @@
           }
           var fakeInternalInstance = {};
           var isArray = Array.isArray;
-          var emptyRefsObject = new React10.Component().refs;
+          var emptyRefsObject = new React9.Component().refs;
           var didWarnAboutStateAssignmentForComponent;
           var didWarnAboutUninitializedState;
           var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -20506,7 +20506,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
         value: true
       });
       exports.default = void 0;
-      var React10 = _interopRequireWildcard(require_react());
+      var React9 = _interopRequireWildcard(require_react());
       var Timing = _interopRequireWildcard(require_timing());
       var _BenchmarkType = _interopRequireDefault(require_BenchmarkType());
       var _math = require_math();
@@ -20624,8 +20624,8 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
           cycle,
           samples,
           startTime
-        }, dispatch] = React10.useReducer(reducer, initialState);
-        React10.useImperativeHandle(ref, () => ({
+        }, dispatch] = React9.useReducer(reducer, initialState);
+        React9.useImperativeHandle(ref, () => ({
           start: () => {
             dispatch({
               type: "START",
@@ -20636,7 +20636,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
         var shouldRender = getShouldRender(type, cycle);
         var shouldRecord = getShouldRecord(type, cycle);
         var isDone = getIsDone(type, cycle, numSamples);
-        var handleComplete = React10.useCallback((startTime2, endTime, samples2) => {
+        var handleComplete = React9.useCallback((startTime2, endTime, samples2) => {
           var runTime = endTime - startTime2;
           var sortedElapsedTimes = samples2.map((_ref2) => {
             var {
@@ -20687,7 +20687,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
             type: "RESET"
           });
         }, [includeLayout, onComplete]);
-        React10.useMemo(() => {
+        React9.useMemo(() => {
           if (running && shouldRecord) {
             dispatch({
               type: "START_SAMPLE",
@@ -20695,7 +20695,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
             });
           }
         }, [cycle, running, shouldRecord]);
-        React10.useEffect(() => {
+        React9.useEffect(() => {
           if (!running) {
             return;
           }
@@ -20727,7 +20727,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
             handleComplete(startTime, now, samples);
           }
         }, [includeLayout, running, isDone, samples, shouldRecord, shouldRender, startTime, timeout]);
-        return running && shouldRender ? /* @__PURE__ */ React10.createElement(Component2, _extends2({}, componentProps, {
+        return running && shouldRender ? /* @__PURE__ */ React9.createElement(Component2, _extends2({}, componentProps, {
           testID: cycle
         })) : null;
       }
@@ -20813,7 +20813,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
             return true;
         }
       }
-      var _default = /* @__PURE__ */ React10.forwardRef(Benchmark2);
+      var _default = /* @__PURE__ */ React9.forwardRef(Benchmark2);
       exports.default = _default;
     }
   });
@@ -20899,15 +20899,12 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }
   });
 
-  // client/index.js
-  var React9 = __toESM(require_react());
-  var import_react_dom = __toESM(require_react_dom());
-
-  // client/app.js
+  // src/client.js
   var React8 = __toESM(require_react());
+  var import_react_dom = __toESM(require_react_dom());
   var import_react_component_benchmark = __toESM(require_dist());
 
-  // benchmarks/tree.js
+  // src/tree.js
   var React = __toESM(require_react());
   function Tree({ breadth, components, depth, id, wrap }) {
     const { Box: Box6 } = components;
@@ -20932,7 +20929,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     return result;
   }
 
-  // benchmarks/sierpinski-triangle.js
+  // src/sierpinski-triangle.js
   var React2 = __toESM(require_react());
 
   // node_modules/d3-scale-chromatic/src/colors.js
@@ -21374,7 +21371,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
   var scheme3 = new Array(3).concat("efedf5bcbddc756bb1", "f2f0f7cbc9e29e9ac86a51a3", "f2f0f7cbc9e29e9ac8756bb154278f", "f2f0f7dadaebbcbddc9e9ac8756bb154278f", "f2f0f7dadaebbcbddc9e9ac8807dba6a51a34a1486", "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a34a1486", "fcfbfdefedf5dadaebbcbddc9e9ac8807dba6a51a354278f3f007d").map(colors_default);
   var Purples_default = ramp_default(scheme3);
 
-  // benchmarks/sierpinski-triangle.js
+  // src/sierpinski-triangle.js
   var targetSize = 10;
   function SierpinskiTriangle({
     components,
@@ -21437,7 +21434,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }
   }
 
-  // benchmarks/inline-styles.js
+  // src/inline-styles.js
   var inline_styles_exports = {};
   __export(inline_styles_exports, {
     Box: () => Box,
@@ -21525,7 +21522,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }, children);
   }
 
-  // benchmarks/styletron-atomic.js
+  // src/styletron-atomic.js
   var styletron_atomic_exports = {};
   __export(styletron_atomic_exports, {
     Box: () => Box2,
@@ -23127,7 +23124,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     return target;
   }
 
-  // benchmarks/styletron-atomic.js
+  // src/styletron-atomic.js
   var View2 = styled("div", {
     alignItems: "stretch",
     borderWidth: "0px",
@@ -23196,7 +23193,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     marginTop: `${y}px`
   }));
 
-  // benchmarks/styletron-atomic-hooks.js
+  // src/styletron-atomic-hooks.js
   var styletron_atomic_hooks_exports = {};
   __export(styletron_atomic_hooks_exports, {
     Box: () => Box3,
@@ -23288,7 +23285,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }, children);
   }
 
-  // benchmarks/styletron-monolithic.js
+  // src/styletron-monolithic.js
   var styletron_monolithic_exports = {};
   __export(styletron_monolithic_exports, {
     Box: () => Box4,
@@ -23365,7 +23362,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     marginTop: `${y}px`
   }));
 
-  // benchmarks/styletron-monolithic-hooks.js
+  // src/styletron-monolithic-hooks.js
   var styletron_monolithic_hooks_exports = {};
   __export(styletron_monolithic_hooks_exports, {
     Box: () => Box5,
@@ -23770,7 +23767,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     return StyletronClient3;
   }();
 
-  // benchmarks/styletron-monolithic-hooks.js
+  // src/styletron-monolithic-hooks.js
   var viewStyle3 = {
     alignItems: "stretch",
     borderWidth: "0px",
@@ -23854,7 +23851,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }, children);
   }
 
-  // benchmarks/index.js
+  // src/benchmarks.js
   var BenchmarkType = {
     MOUNT: "mount",
     MOUNT_WIDE: "mount wide",
@@ -23904,8 +23901,8 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     "Styletron Monolithic Hooks": cases(styletron_monolithic_hooks_exports)
   };
 
-  // client/app.js
-  function App() {
+  // src/client.js
+  function Client() {
     const benchmarkRef = React8.createRef();
     const [benchmarkType, setBenchmarkType] = React8.useState(BenchmarkType.MOUNT);
     const [library, setLibrary] = React8.useState(Object.keys(benchmarks_default)[0]);
@@ -23990,10 +23987,8 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
       ...componentProps
     }))));
   }
-
-  // client/index.js
   var root = document.getElementById("root");
-  import_react_dom.default.render(/* @__PURE__ */ React9.createElement(App, null), root);
+  import_react_dom.default.render(/* @__PURE__ */ React8.createElement(Client, null), root);
 })();
 /*
 object-assign
