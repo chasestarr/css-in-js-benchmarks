@@ -23927,12 +23927,14 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }, /* @__PURE__ */ React8.createElement("div", {
       style: { width: "600px" }
     }, /* @__PURE__ */ React8.createElement("form", null, /* @__PURE__ */ React8.createElement("label", null, "Library", /* @__PURE__ */ React8.createElement("select", {
+      id: "library",
       style: { width: "100%" },
       disabled: running,
       onChange: (event) => setLibrary(event.target.value)
     }, Object.keys(benchmarks_default).map((name) => /* @__PURE__ */ React8.createElement("option", {
       key: name
     }, name)))), /* @__PURE__ */ React8.createElement("label", null, "Benchmark Type", /* @__PURE__ */ React8.createElement("select", {
+      id: "benchmark-type",
       style: { width: "100%" },
       disabled: running,
       onChange: (event) => setBenchmarkType(event.target.value)
@@ -23941,7 +23943,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }, name)))), /* @__PURE__ */ React8.createElement("button", {
       disabled: running,
       onClick: handleStart
-    }, "Start")), /* @__PURE__ */ React8.createElement("ul", {
+    }, "start")), /* @__PURE__ */ React8.createElement("ul", {
       style: {
         listStyle: "none",
         marginBlockStart: 0,
@@ -23963,7 +23965,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }, /* @__PURE__ */ React8.createElement("tr", null, /* @__PURE__ */ React8.createElement("td", null, "mean"), /* @__PURE__ */ React8.createElement("td", {
       "data-test-id": "mean"
     }, result.mean.toFixed(3), "ms")), /* @__PURE__ */ React8.createElement("tr", null, /* @__PURE__ */ React8.createElement("td", null, "std dev"), /* @__PURE__ */ React8.createElement("td", {
-      "data-test-id": "stdDev"
+      "data-test-id": "stddev"
     }, result.stdDev.toFixed(3), "ms")), /* @__PURE__ */ React8.createElement("tr", null, /* @__PURE__ */ React8.createElement("td", null, "p95"), /* @__PURE__ */ React8.createElement("td", {
       "data-test-id": "p95"
     }, result.p95.toFixed(3), "ms")), /* @__PURE__ */ React8.createElement("tr", null, /* @__PURE__ */ React8.createElement("td", null, "p99"), /* @__PURE__ */ React8.createElement("td", {

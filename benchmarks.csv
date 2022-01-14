@@ -1,0 +1,16 @@
+library,benchmark,mean,p95,p99
+Inline Styles,mount,50.418,63.039,69.349
+Inline Styles,mount wide,50.418,63.039,69.349
+Inline Styles,update,74.728,96.835,107.888
+Styletron Atomic,mount,6.273,9.895,11.707
+Styletron Atomic,mount wide,29.886,40.183,45.332
+Styletron Atomic,update,39.599,55.059,62.789
+Styletron Atomic Hooks,mount,13.017,18.95,21.917
+Styletron Atomic Hooks,mount wide,72.351,98.555,111.657
+Styletron Atomic Hooks,update,128.833,161.119,177.263
+Styletron Monolithic,mount,24.198,33.275,37.814
+Styletron Monolithic,mount wide,30.366,42.799,49.016
+Styletron Monolithic,update,40.137,56.542,64.744
+Styletron Monolithic Hooks,mount,12.779,20.546,24.43
+Styletron Monolithic Hooks,mount wide,74.119,104.46,119.631
+Styletron Monolithic Hooks,update,148.292,187.591,207.241
