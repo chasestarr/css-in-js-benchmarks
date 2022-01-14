@@ -1,5 +1,3 @@
-import * as React from "React";
-
 import { Tree } from "./tree.js";
 import { SierpinskiTriangle } from "./sierpinski-triangle.js";
 import * as InlineStyles from "./inline-styles.js";
