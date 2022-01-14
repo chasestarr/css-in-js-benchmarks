@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild client/index.js --bundle --loader:.js=jsx --outfile=dist/index.js",
-    "dev": "esbuild client/index.js --watch --bundle --loader:.js=jsx --outfile=dist/index.js"
+    "build": "esbuild src/client.js --bundle --loader:.js=jsx --outfile=dist/index.js",
+    "dev": "esbuild src/client.js --watch --bundle --loader:.js=jsx --outfile=dist/index.js"
   },
   "author": "",
   "license": "ISC",

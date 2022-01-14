@@ -1,10 +1,11 @@
 // references https://github.com/paularmstrong/react-component-benchmark-example
 
 import * as React from "react";
+import ReactDOM from "react-dom";
 import Benchmark from "react-component-benchmark";
-import benchmarks, { BenchmarkType } from "../benchmarks/index.js";
+import benchmarks, { BenchmarkType } from "./index.js";
 
-export function App() {
+function Client() {
   const benchmarkRef = React.createRef();
   const [benchmarkType, setBenchmarkType] = React.useState(BenchmarkType.MOUNT);
   const [library, setLibrary] = React.useState(Object.keys(benchmarks)[0]);
@@ -136,3 +137,6 @@ export function App() {
     </div>
   );
 }
+
+const root = document.getElementById("root");
+ReactDOM.render(<Client />, root);
