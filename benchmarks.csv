@@ -1,16 +1,19 @@
 library,benchmark,mean,p95,p99
-Inline Styles,mount,46.898,67.026,77.089
-Inline Styles,mount wide,46.898,67.026,77.089
-Inline Styles,update,69.185,96.819,110.636
-Styletron Atomic,mount,6.07,10.642,12.927
-Styletron Atomic,mount wide,28.552,37.264,41.62
-Styletron Atomic,update,37.135,53.207,61.243
-Styletron Atomic Hooks,mount,11.386,16.054,18.388
-Styletron Atomic Hooks,mount wide,67.881,92.077,104.175
-Styletron Atomic Hooks,update,109.387,148.415,167.929
-Styletron Monolithic,mount,22.711,30.463,34.339
-Styletron Monolithic,mount wide,27.761,36.518,40.896
-Styletron Monolithic,update,40.281,59.097,68.504
-Styletron Monolithic Hooks,mount,11.373,17.832,21.062
-Styletron Monolithic Hooks,mount wide,69.284,97.137,111.063
-Styletron Monolithic Hooks,update,133.168,191.184,220.192
+Inline Styles,mount,53.549,70.921,79.606
+Inline Styles,mount wide,53.549,70.921,79.606
+Inline Styles,update,88.824,136.094,159.729
+Styletron Atomic,mount,6.738,10.202,11.934
+Styletron Atomic,mount wide,31.962,43.922,49.902
+Styletron Atomic,update,42.769,60.018,68.643
+Styletron Atomic Hooks,mount,13.71,19.72,22.726
+Styletron Atomic Hooks,mount wide,79.968,104.464,116.712
+Styletron Atomic Hooks,update,139.595,168.069,182.307
+Styletron Monolithic,mount,25.274,33.295,37.306
+Styletron Monolithic,mount wide,32.41,46.602,53.697
+Styletron Monolithic,update,45.416,70.024,82.328
+Styletron Monolithic Hooks,mount,14.923,24.981,30.01
+Styletron Monolithic Hooks,mount wide,84.431,123.888,143.617
+Styletron Monolithic Hooks,update,164.637,206.186,226.96
+Styled Components,mount,73.352,192.288,251.757
+Styled Components,mount wide,453.686,1781.721,2445.739
+Styled Components,update,45.54,73.501,87.482
