@@ -3,7 +3,7 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 import Benchmark from "react-component-benchmark";
-import benchmarks, { BenchmarkType } from "./index.js";
+import benchmarks, { BenchmarkType } from "./benchmarks.js";
 
 function Client() {
   const benchmarkRef = React.createRef();
