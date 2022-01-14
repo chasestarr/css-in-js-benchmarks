@@ -1,10 +1,13 @@
 import { Tree } from "./tree.js";
 import { SierpinskiTriangle } from "./sierpinski-triangle.js";
 import * as InlineStyles from "./inline-styles.js";
+import * as StyledComponents from "./styled-components.js";
 import * as StyletronAtomic from "./styletron-atomic.js";
 import * as StyletronAtomicHooks from "./styletron-atomic-hooks.js";
 import * as StyletronMonolithic from "./styletron-monolithic.js";
 import * as StyletronMonolithicHooks from "./styletron-monolithic-hooks.js";
+
+console.log(StyledComponents);
 
 export const BenchmarkType = {
   MOUNT: "mount",
@@ -55,4 +58,5 @@ export default {
   "Styletron Atomic Hooks": cases(StyletronAtomicHooks),
   "Styletron Monolithic": cases(StyletronMonolithic),
   "Styletron Monolithic Hooks": cases(StyletronMonolithicHooks),
+  "Styled Components": cases(StyledComponents),
 };
